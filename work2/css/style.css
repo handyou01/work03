@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+    background-color: #eeeeee;        /*設定の文字のサイズを正しく反映*/
+}
+
+.wrapper{
+    max-width: 960px;                   /*全体の幅を960pxにする*/
+    margin: 0 auto;                     /*全体を中央揃えにする*/
+    padding: 0 2% 10%;                        /*wrapperの周囲に上0、左右2%、下10%の内部余白をとる*/
+}
+
+h1,h2{
+    color:forestgreen;                /*h1とh2の文字色をforestgreenにする*/
+}
+
+h1{
+    text-align: center;                 /*h1を中央揃えにする*/
+    padding: 50px;                      /*h1の周囲に50pxの内部余白をとる*/
+}
+
+ul{
+    display: flex;                      /*ulの子要素liを横並びにする*/
+    justify-content: center;            /*flexアイテムを中央に配置する*/
+    gap: 2%;                            /*flexアイテム間に余白を設定する（外側の余白はできない）*/
+}
+
+.head-border{
+    width: 10px;                        /*幅10px*/
+    height: 1.5rem;                     /*高さhtmlのフォントサイズの1.5倍*/
+    background-color: forestgreen;    /*背景色forestgreen*/
+}
+
+h2{
+    padding: 10px;                      /*h2の上下左右に10pxの内部余白をとる*/
+    background-color: #ffffff;        /*背景色白*/
+    display: flex;                      /*h2とその子要素head-borderを横並びにする*/
+    gap: 0.5rem;                        /*h2とhead-borderの間に余白を設定する*/
+}
+
+
+p{
+    font-size: 16px;                    /*文字の大きさ16px*/
+    font-weight: 600;                   /*文字の太さを少し太く（標準は400）*/
+    line-height: 1.5rem;                /*行間を文字サイズの1.5倍にする*/
+    background-color: #ffffff;        /*背景色白*/
+    padding: 0 12px 10px 12px;          /*上0　右12px　下10px　左12pxの内部余白をとる*/
+}
+
+@media screen and (max-width :400px) {  /*画面幅が400px以下になった場合以下のcssに切り替わる*/
+    .wrapper{
+        margin: 0 1% 20%;                /*wrapperの上0px、左右1%、下20%の外部余白をとる*/
+        
+    }
+    ul{
+        flex-direction: column;         /*ulの子要素を縦方向に並べる*/
+    }
+
+    p{font-weight: normal;}             /*文字の大きさを標準にする*/
+}
